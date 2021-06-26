@@ -189,7 +189,7 @@ span:hover:before {
     }
 
     span.details:before{
-        height: 10px;
+        height: 0px;
     }
 
     span:hover:before {
