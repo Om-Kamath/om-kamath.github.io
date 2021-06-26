@@ -193,7 +193,7 @@ span:hover:before {
     }
 
     span:hover:before {
-        transform: translateY(6px)
+        transform: translateY(10px)
     }
 }
 
