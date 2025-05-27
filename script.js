@@ -2,27 +2,28 @@
 const resumeData = {
     personal: {
         name: "Om Kamath",
-        subtitle: "AI Solutions Architect • Cornell Tech Graduate Student • Technical Writer",
+        subtitle: "MSIS '27 @Cornell Tech",
         photo: "profile.jpg", 
         contact: [
             { text: "New York, NY", link: null },
             { text: "ok97@cornell.edu", link: "mailto:ok97@cornell.edu" },
             { text: "LinkedIn", link: "https://linkedin.com/in/omkamath" },
-            { text: "GitHub", link: "https://github.com/Om-Kamath" }
+            { text: "GitHub", link: "https://github.com/Om-Kamath" },
+            { text: "Medium", link: "https://omkamath.medium.com" },
         ]
     },
     education: [
         {
-            title: "Cornell Tech (Cornell University)",
+            title: "<u>Cornell Tech (Cornell University)</u>",
             link: "https://tech.cornell.edu/programs/masters-programs/jacobs-technion-cornell-dual-ms-connective-media/",
             degree: "Dual MS in Applied Information Science & Information Systems",
             dates: "Aug 2025 – May 2027",
             location: "New York, NY",
-            gpa: "Yet to be determined",
+            gpa: "-",
             specialization: "Connective Media Specialization"
         },
         {
-            title: "NMIMS University",
+            title: "<u>NMIMS University</u>",
             link: "https://engineering.nmims.edu/",
             degree: "B.Tech, Computer Engineering",
             dates: "Jun 2019 – May 2023",
@@ -34,7 +35,7 @@ const resumeData = {
     experience: [
         {
             title: "AI Solutions Architect & Support Engineer",
-            company: "Cody AI",
+            company: "Cody AI / JBI Metia",
             dates: "Aug 2023 – Present",
             location: "Remote, NYC",
             achievements: [
@@ -59,7 +60,7 @@ const resumeData = {
     writing: [
         {
             title: "Technical Writer & Content Creator",
-            company: "Medium & Industry Publications",
+            company: "<a href='https://omkamath.medium.com'>Medium</a>",
             dates: "Jan 2021 – Present",
             achievements: [
                 "<span class='highlight'>100,000+ views</span> across technical articles on RAG, LLMs, and AI frameworks",
@@ -98,7 +99,7 @@ const resumeData = {
         }
     ],
     recognition: [
-        "Founder of Notes4Every1: Supporting 40+ students in academic achievement",
+        "Founder of <a href='https://notes4every1.super.site'>Notes4Every1</a>: Supporting 40+ students in academic achievement",
         "Certified Photographer: 2M+ views on Unsplash",
         "District-level competitive swimmer and passionate cyclist"
     ]
@@ -128,7 +129,11 @@ function populateResume() {
                 <span>${edu.degree}</span>
                 <span>${edu.dates}</span>
             </div>
-            <div class="location">${edu.location} • <span class="gpa">GPA: ${edu.gpa}</span> • ${edu.specialization}</div>
+            <div class="location"> 
+            ${edu.location} <br>
+            ${edu.specialization} <br> 
+            <span class="gpa">GPA: ${edu.gpa}</span> 
+            </div>
         </div>
     `).join('');
 
