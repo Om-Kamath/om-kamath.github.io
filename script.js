@@ -14,6 +14,7 @@ const resumeData = {
     },
     education: [
         {
+            image: "cornell-tech-logo.png",
             title: "<u>Cornell Tech (Cornell University)</u>",
             link: "https://tech.cornell.edu/programs/masters-programs/jacobs-technion-cornell-dual-ms-connective-media/",
             degree: "Dual MS in Applied Information Science & Information Systems",
@@ -23,10 +24,11 @@ const resumeData = {
             specialization: "Connective Media Specialization"
         },
         {
+            image: "nmims-logo.png",
             title: "<u>NMIMS University</u>",
             link: "https://engineering.nmims.edu/",
-            degree: "B.Tech, Computer Engineering",
-            dates: "Jun 2019 – May 2023",
+            degree: "B.Tech (with Diploma), Computer Engineering",
+            dates: "Jun 2019 – May 2025",
             location: "Mumbai, India",
             gpa: "3.84/4.0",
             specialization: "AI Specialization"
@@ -99,9 +101,9 @@ const resumeData = {
         }
     ],
     recognition: [
-        "Founder of <a href='https://notes4every1.super.site'>Notes4Every1</a>: Supporting 40+ students in academic achievement",
+        "Founder of <u><a href='https://notes4every1.super.site'>Notes4Every1</a></u>: Supporting 40+ students in academic achievement",
         "Certified Photographer: 2M+ views on Unsplash",
-        "District-level competitive swimmer and passionate cyclist"
+        "District-level competitive swimmer and passionate cyclist. Follow me on <u><a href='https://www.strava.com/athletes/30026954'>Strava</a></u>!",
     ]
 };
 
@@ -124,15 +126,18 @@ function populateResume() {
     const educationDiv = document.getElementById('education-content');
     educationDiv.innerHTML = resumeData.education.map(edu => `
         <div class="education-item">
-            <div class="role-title"><a href=${edu.link} target="_blank">${edu.title}</a></div>
+        <img src="${edu.image}" alt="Logo" class="education-logo">
+            <div class="role-title">
+                <a href=${edu.link} target="_blank">${edu.title}</a>
+            </div>
             <div class="company-date">
                 <span>${edu.degree}</span>
                 <span>${edu.dates}</span>
             </div>
             <div class="location"> 
-            ${edu.location} <br>
-            ${edu.specialization} <br> 
-            <span class="gpa">GPA: ${edu.gpa}</span> 
+                ${edu.location} <br>
+                ${edu.specialization} <br> 
+                <span class="gpa">GPA: ${edu.gpa}</span> 
             </div>
         </div>
     `).join('');

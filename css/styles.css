@@ -104,7 +104,7 @@ h2 {
 }
 
 a {
-    color: grey;
+    color: rgb(36, 36, 36);
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -255,6 +255,20 @@ a:hover {
     background-color: #e9ecef; /* Slightly darker grey on hover */
     color: #1a1a1a; /* Darker text color on hover */
     transform: translateY(-1px); /* Subtle lift effect */
+}
+
+.cornell-logo {
+    display: block;
+    max-width: 150px; /* Adjust size as needed */
+    margin: 10px auto; /* Center the logo */
+    object-fit: contain;
+}
+
+.education-logo {
+    display: block;
+    max-width: 120px; /* Adjust size as needed */
+    margin: 10px 0; /* Add spacing */
+    object-fit: contain;
 }
 
 @media (max-width: 768px) {
